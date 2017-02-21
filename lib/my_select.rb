@@ -13,7 +13,7 @@ def my_select(collection)
   new_collection = [] #create new empty array
   i = 1 #counter variable i set to 1 (not 0, which is even)
   while i < collection.length #start while loop, execute code below as long as i is less than the length of the array
-    (new_collection << i) if i.even? # each number gets appended to new_collection that is even
+    (new_collection << yield(i) if i.even? # each number gets appended to new_collection that is even
     i = i + 1 #increment value of i variable
     end #end do loop
   new_collection #return new_collection array
